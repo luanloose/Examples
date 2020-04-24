@@ -46,7 +46,8 @@ O comando: php artisan list, executa a listagem de todos os comandos;
 
 O make possibilita a criação de código fonte, tornando assim o desenvolvimento altamente produtivo.
 
-#### Alguns exemplos:
+### Exemplos make
+
 * php artisan make:controller : cria uma nova classe controller;
 
 * php artisan make:model : cria uma nova classe model;
@@ -55,7 +56,24 @@ O make possibilita a criação de código fonte, tornando assim o desenvolviment
 
 > php artisan route
 
-O route possibilita a criação de rotas, tornando a aplicação mais segura.Alguns exemplos:
-php artisan route:cache : cria um arquivo de rota cache de registro rápido;
-php artisan route:clear : remove o arquivo de rota do cache;
-php artisan route:list : apresenta todas as rotas registradas na aplicação;
+O route possibilita a criação de rotas, tornando a aplicação mais segura.
+
+### Exemplos route
+
+* php artisan route:cache : cria um arquivo de rota cache de registro rápido;
+
+* php artisan route:clear : remove o arquivo de rota do cache;
+
+* php artisan route:list : apresenta todas as rotas registradas na aplicação;
+
+> php artisan optimize
+
+O php artisan optimize cria um arquivo compilado de classes comumente usadas em outras para reduzir a quantidade de arquivos que devem ser incluídos em cada solicitação.
+
+> php artisan config:cache
+
+Para dar ao seu aplicativo um ganho de velocidade, o comando combinará todas as opções de configuração para seu aplicativo em um único arquivo que será carregado rapidamente pela estrutura.
+
+> php artisan key:generate
+
+O comando é usado para gerar uma chave aleatória. Este comando atualizará a chave armazenada no arquivo de ambiente do aplicativo.
