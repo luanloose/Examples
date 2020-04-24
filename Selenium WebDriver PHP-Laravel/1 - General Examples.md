@@ -1,19 +1,30 @@
 # Webdriver PHP API workthough
 
-* Open a browser
+* Open a browser ( I like chrome )
 
-		// start an instance of firefox with selenium-webdriver
-		
-		$browser_type = 'firefox'
-		$host = 'http://localhost:4444/wd/hub'
+		// Silent mode
+		$options = (new ChromeOptions)->addArguments([
+                '--disable-gpu',
+                '--headless',
+                '--no-sandbox'
+            ]);
 
-		$capabilities = array(\WebDriverCapabilityType::BROWSER_NAME => $browser_type);
-		$driver = RemoteWebDriver::create($host, $capabilities);
+        $host = 'http://localhost:4444/wd/hub';
+
+		return RemoteWebDriver::create($host, DesiredCapabilities::chrome()->setCapability(
+                ChromeOptions::CAPABILITY,
+                $options
+            ));
+
+		// Window Mode
+		$chromeOptions = new ChromeOptions();
+        $chromeOptions->addArguments(['no-first-run']);
+        $capabilities = DesiredCapabilities::chrome();
+        $capabilities->setCapability(ChromeOptions::CAPABILITY, $chromeOptions);
+
+        return RemoteWebDriver::create('http://localhost:4444/wd/hub', $capabilities);
+
 		
-		$browser_type
-		# :firefox => firefox
-		# :chrome  => chrome
-		# :ie      => iexplore
 
 *	Go to a specified URL
 
