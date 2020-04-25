@@ -9,7 +9,7 @@ $this->driver->switchTo()->alert()->accept();
 * Decline
 
 ```PHP
-$this->driver->switchTo()->alert()->getText();
+$this->driver->switchTo()->alert()->dismiss();
 ```
 
 * Get text

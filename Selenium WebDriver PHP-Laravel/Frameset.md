@@ -2,4 +2,6 @@
 
 * Switching frames
 
-        $this->driver->switchTo()->frame(0);
+```PHP
+$this->driver->switchTo()->frame(0);
+```

@@ -4,4 +4,6 @@
 
 * Open in the same page
 
-        $this->driver->executeScript('window.open("CODE","_self","");');
+```PHP
+$this->driver->executeScript('window.open("CODE","_self","");');
+```
