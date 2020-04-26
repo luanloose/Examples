@@ -33,7 +33,7 @@ $driver->get('http://google.com');
 $driver->navigate()->to('http://google.com');
 ```
 
-	'NOTE' -- the WebDriver may not wait for the page to load, you'd better using explicit and implicit waits.
+> 'NOTE' -- the WebDriver may not wait for the page to load, you'd better using explicit and implicit waits.
 
 ### Locating Elements
 
@@ -91,8 +91,8 @@ $element = $driver->findElement(WebDriverBy::name('search'));
 * By Link Text
 
 ```PHP
-# example html
-# <a href="http://www.google.com/search?q=cheese">cheese</a>
+// example html
+// <a href="http://www.google.com/search?q=cheese">cheese</a>
 
 $element = $driver->findElement(WebDriverBy::linkText("cheese"));
 ```
@@ -161,7 +161,7 @@ $element = $driver->findElement(WebDriverBy::id('BUTTON_ID'))->click();
 $driver->findElement(WebDriverBy::id('BUTTON_ID'))->click();
 $driver->getKeyboard()->sendKeys('InputText');
 
-# send keyboard actions, press `cmd+a` & `delete`
+// send keyboard actions, press `cmd+a` & `delete`
 $driver->getKeyboard()
               ->sendKeys(array(
                 WebDriverKeys::COMMAND, // Use control on non-mac computers.

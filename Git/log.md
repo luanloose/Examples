@@ -66,7 +66,7 @@ git log --author=usuario
 ##### Exibir revisão e autor da última modificação de uma bloco de linhas
 
 ```GIT
-git blame -L 12,22 meu_arquivo.txt
+git blame -L 12,22 arquivo.txt
 ```
 
 ### Desfazendo operações
@@ -75,24 +75,24 @@ git blame -L 12,22 meu_arquivo.txt
 Este comando deve ser utilizando enquanto o arquivo não foi adicionado na **staged area**. 
 
 ```GIT
-git checkout -- meu_arquivo.txt
+git checkout -- arquivo.txt
 ```
 
 ##### Desfazendo alteração local (staging area)
 Este comando deve ser utilizando quando o arquivo já foi adicionado na **staged area**.
 
 ```GIT
-git reset HEAD meu_arquivo.txt
+git reset HEAD arquivo.txt
 ```
 
 Se o resultado abaixo for exibido, o comando reset *não* alterou o diretório de trabalho. 
 
 	Unstaged changes after reset:
-	M	meu_arquivo.txt
+	M	arquivo.txt
 
 A alteração do diretório pode ser realizada através do comando abaixo:
 
 ```GIT	
-git checkout meu_arquivo.txt
+git checkout arquivo.txt
 ```
 

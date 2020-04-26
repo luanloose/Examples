@@ -2,20 +2,20 @@
 
 ### Geral
 
-As configurações do GIT são armazenadas no arquivo **.gitconfig** localizado dentro do diretório do usuário do Sistema Operacional (Ex.: Windows: C:\Users\Documents and Settings\Leonardo ou *nix /home/leonardo).
+As configurações do GIT são armazenadas no arquivo **.gitconfig** localizado dentro do diretório do usuário do Sistema Operacional (Ex.: Windows: C:\Users\Documents and Settings\Luan ou *nix /home/luan).
 
 As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
 
 ##### Setar usuário
 
 ```GIT
-git config --global user.name "Leonardo Comelli"
+git config --global user.name "Luan Andrade Loose"
 ```
 
 ##### Setar email
 
 ```GIT
-git config --global user.email leonardo@software-ltda.com.br
+git config --global user.email luanloose@hotmail.com
 ```
 
 ##### Setar editor
