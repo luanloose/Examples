@@ -2,53 +2,75 @@
 
 ### Criar novo repositório
 
-	git init
+```GIT
+git init
+```
 
 ### Verificar estado dos arquivos/diretórios
 
-	git status
+```GIT
+git status
+```
 
 ### Adicionar arquivo/diretório (staged area)
 
 ##### Adicionar um arquivo em específico
 
-	git add meu_arquivo.txt
+```GIT
+git add meu_arquivo.txt
+```
 
 ##### Adicionar um diretório em específico
 
-	git add meu_diretorio
+```GIT
+git add meu_diretorio
+```
 
 ##### Adicionar todos os arquivos/diretórios
-	
-	git add .	
-	
+
+```GIT	
+git add .	
+```
+
 ##### Adicionar um arquivo que esta listado no .gitignore (geral ou do repositório)
-	
-	git add -f arquivo_no_gitignore.txt
-	
+
+```GIT	
+git add -f arquivo_no_gitignore.txt
+```
+
 ### Comitar arquivo/diretório
 
 ##### Comitar um arquivo
-	
-	git commit meu_arquivo.txt
+
+```GIT	
+git commit meu_arquivo.txt
+```
 
 ##### Comitar vários arquivos
 
-	git commit meu_arquivo.txt meu_outro_arquivo.txt
-	
+```GIT
+git commit meu_arquivo.txt meu_outro_arquivo.txt
+```
+
 ##### Comitar informando mensagem
 
-	git commit meuarquivo.txt -m "minha mensagem de commit"
+```GIT
+git commit meuarquivo.txt -m "minha mensagem de commit"
+```
 
 ### Remover arquivo/diretório
 
 ##### Remover arquivo
 
-	git rm meu_arquivo.txt
+```GIT
+git rm meu_arquivo.txt
+```
 
 ##### Remover diretório
 
-	git rm -r diretorio
+```GIT
+git rm -r diretorio
+```
 
 ## Repositório Remoto
 
@@ -75,46 +97,68 @@ Pode acontecer o seguinte problema
 
 ### Exibir os repositórios remotos
 
-	git remote
-	
-	git remote -v
+```GIT
+git remote
+```
+
+```GIT	
+git remote -v
+```
 
 ### Vincular repositório local com um repositório remoto
 
-	git remote add origin git@github.com:leocomelli/curso-git.git
-	
+```GIT
+git remote add origin git@github.com:leocomelli/curso-git.git
+```
+
 ### Exibir informações dos repositórios remotos
 
-	git remote show origin
-	
+```GIT
+git remote show origin
+```
+
 ### Renomear um repositório remoto 
 
-	git remote rename origin curso-git
-	
+```GIT
+git remote rename origin curso-git
+```
+
 ### Desvincular um repositório remoto
-	
-	git remote rm curso-git
+
+```GIT	
+git remote rm curso-git
+```
 
 ### Enviar arquivos/diretórios para o repositório remoto
 
 O primeiro **push** de um repositório deve conter o nome do repositório remoto e o branch.
 
-	git push -u origin master
-	
+```GIT
+git push -u origin master
+```
+
 Os demais **pushes** não precisam dessa informação
 
-	git push
-	
+```GIT
+git push
+```
+
 ### Atualizar repositório local de acordo com o repositório remoto
 
 ##### Atualizar os arquivos no branch atual
 
-	git pull
-	
+```GIT
+git pull
+```
+
 ##### Buscar as alterações, mas não aplica-las no branch atual
 
-	git fetch
-	
+```GIT
+git fetch
+```
+
 ### Clonar um repositório remoto já existente
 
-	git clone git@github.com:leocomelli/curso-git.git
+```GIT
+git clone git@github.com:leocomelli/curso-git.git
+```

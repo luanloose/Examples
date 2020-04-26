@@ -7,19 +7,38 @@ As configurações do GIT são armazenadas no arquivo **.gitconfig** localizado 
 As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
 
 ##### Setar usuário
-	git config --global user.name "Leonardo Comelli"
+
+```GIT
+git config --global user.name "Leonardo Comelli"
+```
 
 ##### Setar email
-	git config --global user.email leonardo@software-ltda.com.br
-	
+
+```GIT
+git config --global user.email leonardo@software-ltda.com.br
+```
+
 ##### Setar editor
-	git config --global core.editor vim
-	
+
+```GIT
+git config --global core.editor vim
+```
+
 ##### Setar ferramenta de merge
-	git config --global merge.tool vimdiff
+
+```GIT
+git config --global merge.tool vimdiff
+```
+
 
 ##### Setar arquivos a serem ignorados
-	git config --global core.excludesfile ~/.gitignore
+
+```GIT
+git config --global core.excludesfile ~/.gitignore
+```
 
 ##### Listar configurações
-	git config --list
+
+```GIT
+git config --list
+```
