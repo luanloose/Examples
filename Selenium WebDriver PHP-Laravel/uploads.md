@@ -2,6 +2,7 @@
 
 * Image
 
+```PHP
         $fileInput = $this->driver->findElement(By::id('fupDoc'));
         $fileInput->setFileDetector(new LocalFile());
 
@@ -18,3 +19,4 @@
         )->click();
 
         Storage::delete($this->path . $safeName);
+```

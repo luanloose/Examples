@@ -2,6 +2,7 @@
 
 ## Executing somenthing in your code
 
+```PHP
         // pegando a aba atual
         $abaAntes = $this->driver->getWindowHandles();
 
@@ -18,3 +19,4 @@
 
         //Volta para a aba anterior
         $this->driver->switchTo()->window(reset($abaAntes));
+```
