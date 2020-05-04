@@ -237,6 +237,12 @@ $driver->executeScript("return window.location.pathname");
 // set the timeout to 20 seconds, and the time in interval to 1000 ms
 
 $driver->wait(20, 1000)->until(WebDriverExpectedCondition::titleIs('WebDriver Page'));
+
+$this->driver->wait(3, 500)->until(
+            Condition::visibilityOfElementLocated(
+                By::cssSelector('li:nth-child(2) > span')
+            )
+        );
 ```
 
 * implicit waits
