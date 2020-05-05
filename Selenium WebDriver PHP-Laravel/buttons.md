@@ -1,5 +1,11 @@
 # Buttons workthough
 
+* Simple click in a Button/Link/Image
+
+```PHP
+$element = $driver->findElement(WebDriverBy::id('BUTTON_ID'))->click();
+```
+
 * When you have only part of a button text
 
 ```PHP

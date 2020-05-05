@@ -1,5 +1,11 @@
 # Alerts workthough
 
+* Get the alert
+
+```PHP
+$a = $driver->switchTo->alert();
+```
+
 * Accept an Alert
 
 ```PHP
