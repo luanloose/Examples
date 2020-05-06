@@ -1,47 +1,116 @@
 # API REST para prototipo
 
-## Criar api do zero para processo seletivo ou prototipo
+## Instalação
 
-primeiro instale o laravel pelo composer
+Instale o laravel pelo composer
 
 ```CMD
 composer global require laravel/installer
 ```
 
-depois inicie um projeto
+Inicie um projeto
 
 ```CMD
 laravel new api
 ```
 
-Tendo o projeto criado, precisa configurar no .env conexão com o banco de dados
+## Banco de dados
+
+Tendo o projeto criado, precisa criar o banco de dados e configurar no .env a conexão, caso ja tenha pule este passo e vá direto para o .env
+
+Primeiro vamos criar a base de dados no MySql com o comando abaixo
+
+```CMD
+mysql -uroot -p
+```
+
+Digite a senha para entrar no banco vc vai precisar criar a base de dados
+
+```CMD
+create database supermercado collate utf8mb4_unicode_ci;
+```
+
+> Nota: comando sendo usado no mysql 5.7 ou superior
+
+Banco criado vamos configurar a conexão no arquivo .env
 
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=homestead
-    DB_USERNAME=homestead
-    DB_PASSWORD=secret
+    DB_DATABASE=supermercado
+    DB_USERNAME=root
+    DB_PASSWORD=
 
-Caso seja um projeto próprio crie a migration para startar a tabela no banco de dados
+Para testar a conexão rode o comando
+
+```CMD
+php artisan migrate:install
+```
+
+Ele vai rodar as migrations iniciais e se tiver tudo certo com a conexão podemos seguir.
+
+Vamos criar as migrations para alimentar a base recem criada
 
 ```CMD
 php artisan make:migration create_table_products --create=products
 ```
 
-Crie um controler para ser responsavel pela comunicação entre o banco e a framework.
+Exemplo migration
+
+```PHP
+public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->float('price');
+            $table->text('description');
+            $table->string('slug');
+            $table->timestamps();
+        });
+    }
+```
+
+Rode o comando abaixo para criar a tabela da migration.
+
+```CMD
+php artisan migrate
+```
+
+## Model
+
+Crie um model para ser responsavel pela comunicação entre o banco e a framework.
 
 ```CMD
 php artisan make:model Products
 ```
 
-- crie a valiavel fillable para colocar os campos permitidos na tabela.
-- crie as relaçoes entre as tabelas caso tenha.
+Exemplo de model:
+
+```PHP
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    protected $fillable = [
+		'name', 'price', 'description', 'slug'
+    ];
+}
+```
+
+- Crie a valiavel fillable para colocar os campos permitidos na tabela.
+- Crie as relaçoes entre as tabelas caso tenha.
+
+## Controler
 
 Crie um controler para ser responsavel pela comunicação entre a requisição e o model.
 
 ```CMD
-php artisan make:controller Api/ProductController --resourses --api
+php artisan make:controller Api/ProductController --api
 ```
 
 o parametro api retira as funções responsaveis por exibir a view de criação e edição.
@@ -49,7 +118,7 @@ o parametro api retira as funções responsaveis por exibir a view de criação 
 Exemplo de função para a api, salvar produto
 
 ```PHP
-- public function save(Request $request)
+public function save(Request $request)
 {
     $data = $request->all();
     $product = $this->product->create($data);
@@ -60,8 +129,9 @@ Exemplo de função para a api, salvar produto
 
 - Faça todas as funçoes solicitadas show, save, delete, uptade para o passo a seguir.
 
-Crie os endpoints para sua api ser consumida baseada nas funções criadas caso nao seja um 
-controller resourses 
+## Rotas
+
+Crie os endpoints para sua api ser consumida baseada nas funções criadas no controller
 
 ```PHP
 Route::namespace('Api')->group(function(){
@@ -76,7 +146,7 @@ Route::namespace('Api')->group(function(){
 });
 ```
 
-Caso tenha criado um resourses a rota é a seguinte
+Como opção você pode criar uma rota resourses:
 
 ```PHP
 Route::namespace('Api')->group(function(){
@@ -93,6 +163,8 @@ return response()->json(['message' => 'Você entrou na função'.__METHOD__]);
 ```
 
 Agora chame pelo postman pelo get e ve se funcionou tudo certo.
+
+## Resource / Response
 
 para melhorar o retorno dos models e ter um controle do que é retornado iremos criar um 
 resource para os produtos para apenas mostrar alguns campos.
@@ -140,6 +212,8 @@ convertido para json, caso queira outros campos, só atualizar.
 ```
 
 ela retorna uma collection com uma paginação
+
+## Request personalizado
 
 Para criar validações dos campos da sua api vc vai criar um request personalizado e fazer as validações dentro dele
 
@@ -190,3 +264,10 @@ Ao mandar uma requisição ja fará as validações antes de entrar no metodo e 
 
 > Status code retornado é o 422.
 
+## Autenticação com JWT
+
+Primeiro vamos baixar a biblioteca que vai nos auxiliar na criação dos tokens
+
+```CMD
+composer require lcobucci/jwt
+```
