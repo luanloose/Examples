@@ -34,12 +34,17 @@ create database supermercado collate utf8mb4_unicode_ci;
 
 Banco criado vamos configurar a conexão no arquivo .env
 
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=supermercado
-    DB_USERNAME=root
-    DB_PASSWORD=
+> DB_CONNECTION=mysql
+>
+> DB_HOST=127.0.0.1
+>
+> DB_PORT=3306
+>
+> DB_DATABASE=supermercado
+>
+> DB_USERNAME=root
+>
+> DB_PASSWORD=
 
 Para testar a conexão rode o comando
 
@@ -97,7 +102,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $fillable = [
-		'name', 'price', 'description', 'slug'
+        'name', 'price', 'description', 'slug'
     ];
 }
 ```
@@ -135,13 +140,13 @@ Crie os endpoints para sua api ser consumida baseada nas funções criadas no co
 
 ```PHP
 Route::namespace('Api')->group(function(){
-	Route::prefix('products')->group(function(){
-		Route::get('/', 'ProductController@index');
-		Route::get('/{id}', 'ProductController@show');
-		Route::post('/', 'ProductController@save');
-		Route::put('/', 'ProductController@update');
-		Route::patch('/', 'ProductController@update');
-		Route::delete('/{id}', 'ProductController@delete');
+    Route::prefix('products')->group(function(){
+        Route::get('/', 'ProductController@index');
+        Route::get('/{id}', 'ProductController@show');
+        Route::post('/', 'ProductController@save');
+        Route::put('/', 'ProductController@update');
+        Route::patch('/', 'ProductController@update');
+        Route::delete('/{id}', 'ProductController@delete');
 });
 });
 ```
@@ -150,7 +155,7 @@ Como opção você pode criar uma rota resourses:
 
 ```PHP
 Route::namespace('Api')->group(function(){
-	Route::resource('products')-'ProductController');
+    Route::resource('products')-'ProductController');
 });
 ```
 
@@ -166,23 +171,23 @@ Agora chame pelo postman pelo get e ve se funcionou tudo certo.
 
 ## Resource / Response
 
-para melhorar o retorno dos models e ter um controle do que é retornado iremos criar um 
+para melhorar o retorno dos models e ter um controle do que é retornado iremos criar um
 resource para os produtos para apenas mostrar alguns campos.
 
 ```CMD
 php artisan make:resource ProductResource
 ```
 
-Quando abrir o arquivo coloque este código na função toArray, ela contem o array para ser 
+Quando abrir o arquivo coloque este código na função toArray, ela contem o array para ser
 convertido para json, caso queira outros campos, só atualizar.
 
 ```PHP
 public function toArray($request)
 {
     return [
-	'name' => $this->name,
-	'price' => $this->price,
-	'description'=> $this->description
+        'name' => $this->name,
+        'price' => $this->price,
+        'description'=> $this->description
     ];
 }
 ```
@@ -199,15 +204,15 @@ caso precise de varios itens no retorno, vamos gerar uma resource collection
 php artisan make:resource Product --collection
 ```
 
-Quando abrir o arquivo coloque este código na função toArray, ela contem o array para ser 
+Quando abrir o arquivo coloque este código na função toArray, ela contem o array para ser
 convertido para json, caso queira outros campos, só atualizar.
 
 ```PHP
 - public function toArray($request)
 {
-	return [
-		'data' => $this->collection
-	];
+    return [
+        'data' => $this->collection
+    ];
 }
 ```
 
@@ -235,9 +240,9 @@ exemplo de rules:
 public function rules()
 {
     return [
-	    'name'         => 'required',
-	    'price'        => 'required',
-	    'description'  => 'required'
+        'name'         => 'required',
+        'price'        => 'required',
+        'description'  => 'required'
     ];
 }
 ```

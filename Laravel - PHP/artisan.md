@@ -1,6 +1,6 @@
 # Artisan Commands
 
-## Segue abaixo uma lista de comandos e suas ações:
+## Segue abaixo uma lista de comandos e suas ações
 
 ```PHP
 php artisan serve
