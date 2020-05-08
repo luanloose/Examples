@@ -263,11 +263,3 @@ public function show(ProductRequest $request)
 Ao mandar uma requisição ja fará as validações antes de entrar no metodo e caso falhe em alguma condição ele retornará um json com todas os campos que deram false.
 
 > Status code retornado é o 422.
-
-## Autenticação com JWT
-
-Primeiro vamos baixar a biblioteca que vai nos auxiliar na criação dos tokens
-
-```CMD
-composer require lcobucci/jwt
-```
