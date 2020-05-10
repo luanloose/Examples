@@ -12,7 +12,7 @@
 * [Repositórios](https://github.com/luanloose/Examples/blob/master/Git/Repositorios.md)
 * [Tags](https://github.com/luanloose/Examples/blob/master/Git/Tags.md)
 
-Documentação : https://git-scm.com/doc
+> [Documentação](https://git-scm.com/doc)
 
 ### Laravel
 
@@ -22,7 +22,7 @@ Documentação : https://git-scm.com/doc
 * [Middleware](https://github.com/luanloose/Examples/blob/master/Laravel%20-%20PHP/Middleware.md)
 * [Migrations](https://github.com/luanloose/Examples/blob/master/Laravel%20-%20PHP/Controler.md)
 
-Documentação : https://laravel.com/docs/7.x
+> [Documentação](https://laravel.com/docs/7.x)
 
 ### PHP Web Driver
 
@@ -38,8 +38,8 @@ Documentação : https://laravel.com/docs/7.x
 * [Uploads](https://github.com/luanloose/Examples/blob/master/Selenium%20WebDriver%20PHP-Laravel/Uploads.md)
 * [Windows](https://github.com/luanloose/Examples/blob/master/Selenium%20WebDriver%20PHP-Laravel/Windows.md)
 
-Documentação : https://php-webdriver.github.io/php-webdriver/1.4.0/
+> [Documentação](https://php-webdriver.github.io/php-webdriver/1.4.0/)
 
 ### PHP
 
-Documentação : https://www.php.net/manual/pt_BR/
+> [Documentação](https://www.php.net/manual/pt_BR/)
