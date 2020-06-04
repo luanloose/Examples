@@ -1,6 +1,7 @@
 # Testes da aplicação exemplo
 
 ## Rodar testes
+
 ```CMD
 ./vendor/bin/phpunit
 ```
