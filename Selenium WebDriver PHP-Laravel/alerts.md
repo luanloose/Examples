@@ -3,7 +3,7 @@
 * Get the alert
 
 ```PHP
-$a = $driver->switchTo->alert();
+$a = $this->$driver->switchTo->alert();
 ```
 
 * Accept an Alert

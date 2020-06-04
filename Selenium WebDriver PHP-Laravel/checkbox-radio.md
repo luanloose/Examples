@@ -5,17 +5,17 @@
 * Check if it is selected
 
 ```PHP
-$driver->findElement(WebDriverBy::id('CheckBox'))->isSelected();
+$this->driver->findElement(WebDriverBy::id('CheckBox'))->isSelected();
 ```
 
 * Select the element
 
 ```PHP
-$driver->findElement(WebDriverBy::id('CheckBox'))->click();
+$this->driver->findElement(WebDriverBy::id('CheckBox'))->click();
 ```
 
 * Deselect the element
 
 ```PHP
-$driver->findElement(WebDriverBy::id('CheckBox'))->clears();
+$this->driver->findElement(WebDriverBy::id('CheckBox'))->clears();
 ```
