@@ -7,11 +7,11 @@
 * By name
 
 ```PHP
-$driver->manage()->deleteCookieNamed('Cookie-Name');
+$this->driver->manage()->deleteCookieNamed('Cookie-Name');
 ```
 
 * Or all of them
 
 ```PHP
-$driver->manage()->deleteAllCookies();
+$this->driver->manage()->deleteAllCookies();
 ```

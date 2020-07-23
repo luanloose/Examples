@@ -1,30 +1,30 @@
 # Visualizar histórico
 
-##### Exibir histórico
+## Exibir histórico
 
-```GIT	
+```GIT
 git log
 ```
 
-##### Exibir histórico com diff das duas últimas alterações
+## Exibir histórico com diff das duas últimas alterações
 
 ```GIT
 git log -p -2
 ```
 
-##### Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))
+## Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))
 
 ```GIT
 git log --stat
 ```
 
-##### Exibir informações resumidas em uma linha (hash completa e comentário)
+## Exibir informações resumidas em uma linha (hash completa e comentário)
 
 ```GIT
 git log --pretty=oneline
 ```
 
-##### Exibir histórico com formatação específica (hash abreviada, autor, data e comentário)
+## Exibir histórico com formatação específica (hash abreviada, autor, data e comentário)
 
 ```GIT
 git log --pretty=format:"%h - %an, %ar : %s"
@@ -35,64 +35,65 @@ git log --pretty=format:"%h - %an, %ar : %s"
 * %ar: Data;
 * %s: Comentário.
 
-Verifique as demais opções de formatação no [Git Book](http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History)
-
-##### Exibir histório de um arquivo específico
+## Exibir histório de um arquivo específico
 
 ```GIT
 git log -- <caminho_do_arquivo>
 ```
 
-##### Exibir histórico de um arquivo específico que contêm uma determinada palavra
+## Exibir histórico de um arquivo específico que contêm uma determinada palavra
 
 ```GIT
 git log --summary -S<palavra> [<caminho_do_arquivo>]
 ```
 
-##### Exibir histórico modificação de um arquivo
+## Exibir histórico modificação de um arquivo
 
 ```GIT
 git log --diff-filter=M -- <caminho_do_arquivo>
 ```
 
-* O <D> pode ser substituido por: Adicionado (A), Copiado (C), Apagado (D), Modificado (M), Renomeado (R), entre outros.
+* O (D) pode ser substituido por: Adicionado (A), Copiado (C), Apagado (D), Modificado (M), Renomeado (R), entre outros.
 
-##### Exibir histório de um determinado autor
+## Exibir histório de um determinado autor
 
 ```GIT
 git log --author=usuario
 ```
 
-##### Exibir revisão e autor da última modificação de uma bloco de linhas
+## Exibir revisão e autor da última modificação de uma bloco de codigo
 
 ```GIT
-git blame -L 12,22 arquivo.txt
+git blame -L 12,22 codigo.php
 ```
 
 ### Desfazendo operações
 
-##### Desfazendo alteração local (working directory)
-Este comando deve ser utilizando enquanto o arquivo não foi adicionado na **staged area**. 
+## Desfazendo alteração local (working directory)
+
+Este comando deve ser utilizando enquanto o arquivo não foi adicionado na **staged area**.
 
 ```GIT
-git checkout -- arquivo.txt
+git checkout -- codigo.php
 ```
 
-##### Desfazendo alteração local (staging area)
+## Desfazendo alteração local (staging area)
+
 Este comando deve ser utilizando quando o arquivo já foi adicionado na **staged area**.
 
 ```GIT
-git reset HEAD arquivo.txt
+git reset HEAD codigo.php
 ```
 
-Se o resultado abaixo for exibido, o comando reset *não* alterou o diretório de trabalho. 
+Se o resultado abaixo for exibido, o comando reset *não* alterou o diretório de trabalho.
 
-	Unstaged changes after reset:
-	M	arquivo.txt
+```CMD
+Unstaged changes after reset:
+M   codigo.php
+```
 
 A alteração do diretório pode ser realizada através do comando abaixo:
 
-```GIT	
-git checkout arquivo.txt
+```GIT
+git checkout codigo.php
 ```
-

@@ -23,7 +23,7 @@
 // example html
 // <input id="q">...</input>
 
-$element = $driver->findElement(WebDriverBy::id("q"));
+$element = $this->driver->findElement(WebDriverBy::id("q"));
 ```
 
 * By Class Name
@@ -32,7 +32,7 @@ $element = $driver->findElement(WebDriverBy::id("q"));
 // example html
 // <div class="highlight-java" style="display: none; ">...</div>
 
-$element = $driver->findElement(WebDriverBy::className('highlight-java'));
+$element = $this->driver->findElement(WebDriverBy::className('highlight-java'));
 ```
 
 * By Tag Name
@@ -41,7 +41,7 @@ $element = $driver->findElement(WebDriverBy::className('highlight-java'));
 // example html
 // <div class="highlight-java" style="display: none; ">...</div>
 
-$element = $driver->findElement(WebDriverBy::tagName("div"));
+$element = $this->driver->findElement(WebDriverBy::tagName("div"));
 ```
 
 * By Name
@@ -50,7 +50,7 @@ $element = $driver->findElement(WebDriverBy::tagName("div"));
 // example html
 // <input id="q" name='search' type='text'>…</input>
 
-$element = $driver->findElement(WebDriverBy::name('search'));
+$element = $this->driver->findElement(WebDriverBy::name('search'));
 ```
 
 * By Link Text
@@ -59,7 +59,7 @@ $element = $driver->findElement(WebDriverBy::name('search'));
 // example html
 // <a href="http://www.google.com/search?q=cheese">cheese</a>
 
-$element = $driver->findElement(WebDriverBy::linkText("cheese"));
+$element = $this->driver->findElement(WebDriverBy::linkText("cheese"));
 ```
 
 * By Partial Link Text
@@ -68,7 +68,7 @@ $element = $driver->findElement(WebDriverBy::linkText("cheese"));
 // example html
 // <a href="http://www.google.com/search?q=cheese">search for cheese</a>
 
-$element = $driver->findElement(WebDriverBy::partialLinkText("chee"));
+$element = $this->driver->findElement(WebDriverBy::partialLinkText("chee"));
 ```
 
 * By XPath
@@ -80,7 +80,7 @@ $element = $driver->findElement(WebDriverBy::partialLinkText("chee"));
 // <li><a href="/logout">Logout</a></li>
 // </ul>
 
-$element = $driver->findElement(WebDriverBy::xpath('//a[@href='/logout']'));
+$element = $this->driver->findElement(WebDriverBy::xpath('//a[@href='/logout']'));
 ```
 
 > `NOTE` -- When using `WebDriverBy::xpath` be aware that,
@@ -98,7 +98,7 @@ $element = $driver->findElement(WebDriverBy::xpath('//a[@href='/logout']'));
 //  <span class="dairy aged">cheese</span>
 // </div>
 
-$element = $driver->findElement(WebDriverBy::cssSelector('#food span.dairy'));
+$element = $this->driver->findElement(WebDriverBy::cssSelector('#food span.dairy'));
 ```
 
 * `WebDriverBy::cssSelector` more examples:
@@ -115,17 +115,17 @@ $element = $driver->findElement(WebDriverBy::cssSelector('#food span.dairy'));
 * visibility
 
 ```PHP
-$driver->findElement(WebDriverBy::id('element'))->isDisplayed();
+$this->driver->findElement(WebDriverBy::id('element'))->isDisplayed();
 ```
 
 * get text
 
 ```PHP
-$driver->findElement(WebDriverBy::id('element'))->getText();
+$this->driver->findElement(WebDriverBy::id('element'))->getText();
 ```
 
 * get attribute
 
 ```PHP
-$driver->findElement(WebDriverBy::id('element'))->getAttribute('class');
+$this->driver->findElement(WebDriverBy::id('element'))->getAttribute('class');
 ```

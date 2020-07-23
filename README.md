@@ -1,5 +1,9 @@
 # Code Examples
 
+## Resumo
+
+Exemplos do meu dia a dia, alguns escritos totalmente por mim, outros que peguei os exemplos em portais e adaptados para meu uso.
+
 ### Web Driver
 
 ### Git

@@ -15,3 +15,15 @@ foreach ($elements as $element) {
     $this->driver->findElement(By::id('ID'))->click();
 }
 ```
+
+* Close modals
+
+```PHP
+$elements = $this->driver->findElements(
+    By::cssSelector('img[action="closeWindow"]')
+);
+
+foreach ($elements as $element) {
+    $element->click();
+}
+```
