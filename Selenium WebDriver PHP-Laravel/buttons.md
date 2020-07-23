@@ -21,3 +21,11 @@ foreach ($elements as $element) {
         }
     }
 ```
+
+* If you have problems try this
+
+```PHP
+$action = new Action($this->driver);
+$botao = $this->driver->findElement(By::xpath("(//button[@type='button'])[15]"));
+$action->moveToElement($botao)->click()->perform();
+```
