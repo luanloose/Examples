@@ -31,11 +31,11 @@ php --version
 
 ## Instalar composer
 ```
-https://getcomposer.org/download/
+sudo apt install composer
 ```
 
 ## Configurar Path composer
-Rode esse para funcionar o comando composer
+Rode esse comando caso não funcione o apt install
 ```
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 ```
@@ -58,7 +58,7 @@ sudo apt install npm
 
 ## Instalar yarn
 ```
-https://www.hostinger.com.br/tutoriais/yarn-install/
+sudo apt install yarn
 ```
 
 ## Colocar Ubuntu como padrão
