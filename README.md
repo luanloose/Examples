@@ -1,11 +1,13 @@
 # Code Examples
+Exemplos de tecnologias que estou estudando.
 
-## Resumo
+## Contribue
 
-Exemplos do meu dia a dia, alguns escritos totalmente por mim, outros que peguei os exemplos em portais e adaptados para meu uso.
+Caso queira contribuir com o projeto, faça o fork e use a seguinte estrutura:
+Pasta/tutorial.md
 
-### Web Driver
-
+Se precisar de mais arquivos para determinado assunto crie uma subpasta
+Pasta/Sub Pasta/tutorial.md
 ### Git
 
 * [Branches](https://github.com/luanloose/Examples/blob/master/Git/Branches.md)
@@ -42,8 +44,12 @@ Exemplos do meu dia a dia, alguns escritos totalmente por mim, outros que peguei
 * [Uploads](https://github.com/luanloose/Examples/blob/master/Selenium%20WebDriver%20PHP-Laravel/Uploads.md)
 * [Windows](https://github.com/luanloose/Examples/blob/master/Selenium%20WebDriver%20PHP-Laravel/Windows.md)
 
-> [Documentação](https://php-webdriver.github.io/php-webdriver/1.4.0/)
+> [Documentação Oficial](https://php-webdriver.github.io/php-webdriver/1.4.0/)
 
 ### PHP
+> [Documentação Oficial](https://www.php.net/manual/pt_BR/)
+### Wsl
+* [Configuração](https://github.com/luanloose/Examples/blob/master/Wsl/config.md)
+### Windows Tips
+* [Visualizador de imagens](https://github.com/luanloose/Examples/blob/master/Windows/habilitar-visualizador.md)
 
-> [Documentação](https://www.php.net/manual/pt_BR/)
